@@ -72,6 +72,6 @@ odd.remove(min(odd))
     
 print(max(even)+min(odd))
 
-print(difference)
+
             
     
