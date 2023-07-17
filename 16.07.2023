@@ -40,6 +40,46 @@ for j in range(n):
 result=productsmallpair(sum,arr)
 print(result)
 ===============================================================================================================================================================
+Execute the given function.
+def LargeSmallSum(arr)
 
+The function takes an integral arr which is of the size or length of its arguments. Return the sum of the second smallest element at odd position ‘arr’ and the second largest element at the even position.
+
+Assumption
+
+Every array element is unique.
+Array is 0 indexed.
+Note:
+
+If the array is empty, return 0.
+If array length is 3 or <3, return 0.
+ 
+Example
+
+Input:
+Arr: 3 2 1 7 5 4
+
+Output:
+7
+
+Coding:
+
+arr=[]
+n = int(input("Enter number of elements : "))
+for i in range(0, n):
+    ele = int(input())
+    arr.append(ele) 
+    
+even=[]
+odd=[]
+for i in range(0,n):
+    if(i%2==0):
+        even.append(arr[i])
+    else:
+        odd.append(arr[i])
+even.remove(max(even))
+odd.remove(min(odd))
+    
+print(max(even)+min(odd))
 
         
