@@ -1,0 +1,49 @@
+1.What is an array?
+  An array is a collection of items of same data type stored at contiguous memory locations.
+
+2.What are the different types of array?
+  *One dimensional array
+  *Two dimensional array
+  *Three dimensional array/Multi-dimensional array
+
+3.How do you declare an array in different programming languages?
+    C , C++    :  data_type array_name[arra_size];
+    C#, Java   :  data_type[] array_name = new data_type[array_size];
+    Python     :  value=[value1,value2,..]  or value=[]
+    PHP        :  $value = array(value1,value2,...)
+
+4.How do you access an element in array?
+  Array elements can be accessed by its index value.
+  Ex:arr=[1,2,3,4,5]
+     print(array[2])
+     output:
+        3
+
+5.How do you iterate through an array?
+  It can be iterate by using loops.
+  if loop:
+     arr=[1,2,3,4,5,6]
+     for i in range(len(arr)):
+         print(arr[i])
+     output:
+       1 2 3 4 5 6 
+
+6.How do you find the sum of all elements in the array?
+  In python, we can find the sum using inbuilt function sum()
+  Ex:
+     arr=[10,20,20,50]
+     print(sum(arr))
+     output:
+         100
+
+7.How do you find the average of all elements in an array?
+  arr=[10,20,20,50]
+  print(sum(arr)/4)
+  output:
+      25
+
+8.      
+
+         
+  
+        
