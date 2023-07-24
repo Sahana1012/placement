@@ -1,4 +1,4 @@
-Write a program to print Floyd’s Triangle.
+1.Write a program to print Floyd’s Triangle.
 This is one of the important pattern questions among all AMCAT Coding Questions.
 
 Coding:
@@ -15,3 +15,15 @@ Output:
 4 5 6
 7 8 9 10
 ==============================================================================================================================================================
+2.Write a program to find the frequency of a user-given character in a string.
+
+Coding:
+s=input()
+ch=input()
+l=list(s)
+print(l.count(ch))
+Output:
+geeksforgeeks
+e
+4
+===============================================================================================================================================================
