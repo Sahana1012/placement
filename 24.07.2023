@@ -27,3 +27,28 @@ geeksforgeeks
 e
 4
 ===============================================================================================================================================================
+3.Write a program to find all the roots of a quadratic equation
+
+Coding:
+import math
+def findRoots(a, b, c):
+    if a == 0:
+        print("Invalid")
+        return -1
+    d = b * b - 4 * a * c
+    sqr = math.sqrt(abs(d))
+ 
+    if d > 0:
+        print((-b + sqr)/(2 * a))
+        print((-b - sqr)/(2 * a))
+    elif d == 0:
+        print(-b / (2*a))
+    else:  
+        print(- b / (2*a), " + i", sqr/ (2 * a))
+        print(- b / (2*a), " - i", sqr / (2 * a))
+ 
+a=int(input()) 
+b=int(input())
+c=int(input())
+findRoots(a, b, c)
+ 
