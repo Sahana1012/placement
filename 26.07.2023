@@ -17,4 +17,54 @@ Solution:
        nums1[m:]=nums2
        nums1.sort()  
  =============================================================================================================================================================      
-       
+2.
+A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+Given a string s, return true if it is a palindrome, or false otherwise.
+
+Example 1:
+
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+
+Solution:
+ def isPalindrome(self, s):
+        l=[]
+        for i in s:
+            i.lower()
+            if(i.isalnum()):
+                l.append(i)
+        if(l==l[::-1]):
+            return "true"
+        return "false"     
+==============================================================================================================================================================
+3.
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+Solution:
+def isAnagram(self, s, t):
+  if(sorted(s)==sorted(t)):
+        return "true"
+  return "false"
+==============================================================================================================================================================
+
+4.
+Write a function to find the longest common prefix string amongst an array of strings.
+
+If there is no common prefix, return an empty string "".
+
+solution:
+   def longestCommonPrefix(self, strs):
+        st=""
+        for i in zip(*strs):
+            if (len(set(i)))==1:
+                st+=i[0]
+            else:
+                return st
+        return st
+=============================================================================================================================================================
+
+
