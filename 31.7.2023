@@ -1,0 +1,50 @@
+1.
+Given a string s consisting of words and spaces, return the length of the last word in the string.
+
+A word is a maximal substring consisting of non-space characters only.
+
+Solution:
+  def lengthOfLastWord(self, s):
+        st=s.strip()
+        sm=st.split()
+        a=sm[-1]
+        return len(a)
+=============================================================================================================================================================        
+ 2.
+ Write a function CheckPassword(str) which will accept the string as an argument or parameter and validates the password. It will return 1 if the conditions are satisfied else it’ll return 0?
+
+The password is valid if it satisfies the below conditions:
+
+It should contain at least 4 characters.
+At least 1 numeric digit should be present.
+1 Capital letter should be there.
+Password should not contain space or slash.
+The starting character should not be a number.
+Sample Test Case:
+
+Input:
+
+bB1_89
+
+Output:
+
+1
+
+Solution:
+def checkpassword(password):
+    if(len(password)<4):
+        return 0
+    if not any(char.isdigit() for char in password):
+        return 0
+    if not any(char.isupper() for char in password):
+        return 0
+    if any(char in password for char in (' ','/')):
+        return 0
+    if(password[0].isdigit()):
+        return 0
+    return 1
+
+s=input()
+result=checkpassword(s)
+print(result)
+=============================================================================================================================================================
