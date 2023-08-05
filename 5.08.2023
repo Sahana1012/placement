@@ -1,0 +1,120 @@
+1. Write a program to find the second largest element in an array.
+n=int(input())
+arr=[]
+for i in range(n):
+    arr.append(int(input()))
+arr.remove(max(arr))
+maxi=max(arr)
+print(maxi)
+=================================================================================================================================================================
+2. Write a program to sort an array in ascending order using the bubble sort algorithm.
+def bubblesort(arr):
+    n=len(arr)
+    for i in range(n):
+        for j in range(0,n-i-1):
+            if(arr[j]>arr[j+1]):
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+n=int(input())
+a=[]
+for i in range(n):
+    a.append(int(input()))
+bubblesort(a)
+print(a)             
+================================================================================================================================================================
+3. Write a program to reverse a linked list.
+#include<stdio.h>
+#include<stdlib.h>
+ struct node 
+	{
+		int data;
+		struct node* next;
+	};
+	
+	struct node *head,*newnode,*prev=NULL,*fwrd=NULL,*temp;
+
+	void create()
+	{
+		int ch;
+		do
+		{
+			
+			newnode=(struct node*)malloc(sizeof(struct node));
+			printf("Enter the data :");
+			scanf("%d",&newnode->data);
+			newnode->next=NULL;
+		
+			if(head==NULL)
+			{
+				head=newnode;
+				temp=head;
+			}
+			else
+			{
+				temp->next=newnode;
+				temp=newnode;
+			}
+			printf("do you want to continue :");
+			scanf("%d",&ch);
+		}while(ch);
+	}
+	void display()
+	{
+		temp=head;
+		printf("\nThe elements in the list :\n");
+		while(temp != NULL)
+		{
+			printf(" %d ",temp->data);
+			temp=temp->next;
+			
+		}	
+	}
+	void reverse(struct node* current)
+	{
+	
+		current=head;
+		while(current != NULL)
+		{
+			fwrd=current->next;
+			current->next=prev;
+			prev=current;
+			current=fwrd;
+		}
+		head=prev;
+	
+		display();
+	
+}	
+int main()
+{
+	
+	create();
+	display();
+	reverse(head);
+	return 0;
+}
+==============================================================================================================================================================
+4. Write a program to find the factorial of a number using recursion.
+def factorial(n):
+    if(n==0 or n==1):
+        return 1
+    else:
+        return n*factorial(n-1)
+
+num=int(input())
+if(num<0):
+    print("factorial is not defined for negative numbers")
+else:
+    result=factorial(num)
+    print(result)
+=============================================================================================================================================================
+5. Write a program to check if a given string is an anagram.
+s=input()
+l=input()
+s=sorted(s)
+l=sorted(l)
+if(l==s):
+    print("Anagram")
+else:
+    print("not anagram")
+==============================================================================================================================================================
+    
