@@ -1,0 +1,82 @@
+1. Write a program to implement a binary search algorithm.
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    
+    while left <= right:
+        mid = left + (right - left) // 2
+        
+        if arr[mid] == target:
+            return mid  
+        elif arr[mid] < target:
+            left = mid + 1  
+        else:
+            right = mid - 1 
+            
+    return -1  # Element not found
+
+# Example usage
+sorted_list = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
+target_element = 23
+
+result = binary_search(sorted_list, target_element)
+
+if result != -1:
+    print(f"Element {target_element} found at index {result}")
+else:
+    print(f"Element {target_element} not found in the list")
+======================================================================================================================================================================
+2. Write a program to find the GCD (Greatest Common Divisor) of two numbers.
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+num1 = 48
+num2 = 18
+
+result = gcd(num1, num2)
+
+print(f"The GCD of {num1} and {num2} is {result}")
+=============================================================================================================================================================
+3. Write a program to find the Fibonacci sequence up to a given number.
+n=int(input())
+a=0
+b=1
+for i in range(n):
+    c=a+b
+    print(c)
+    a=b
+    b=c
+==============================================================================================================================================================
+4. Write a program to check if a number is a prime number.
+
+def is_prime(num):
+    if num <= 1:
+        return False
+    if num <= 3:
+        return True
+    if num % 2 == 0 or num % 3 == 0:
+        return False
+    i = 5
+    while i * i <= num:
+        if num % i == 0 or num % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+# Example usage
+num = int(input("Enter a number: "))
+
+if is_prime(num):
+    print(f"{num} is a prime number.")
+else:
+    print(f"{num} is not a prime number.")
+==============================================================================================================================================================
+5. Write a program to implement a stack data structure.
+
+
+
+
+
+
+
+
