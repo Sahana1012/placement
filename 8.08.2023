@@ -14,3 +14,18 @@ l=list(s.split(" "))
 l.reverse()
 print(*l)
 =================================================================================================================================================================
+4. Write a program to find the power of a number using recursion.
+def power(n,p):
+    if(p==0):
+        return 1
+    if(p==1):
+        return n
+    return n*(power(n,p-1))
+
+n=int(input())
+p=int(input())
+res=power(n,p)
+print(res)
+===============================================================================================================================================================
+5. Write a program to find the number of occurrences of a given element in an array.
+
